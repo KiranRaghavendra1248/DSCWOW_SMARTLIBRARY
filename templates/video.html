@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p>{{ message }}</p>  
+          {% endfor %}  
+    {% endif %}  
+    {% endwith %} 
+    <h1>Wait while camra is scanning you</h1>
+    <img src="{{ url_for('output_feed') }}">
+      <a href= scan> <button type="button" id="first" class="btn btn-primary">SCAN BOOKS</button> </a>
+      <a href= home> <button type="button" id="first" class="btn btn-primary">BACK TO HOME PAGE</button> </a>
+  </body>
+  </body>
+</html>
