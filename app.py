@@ -3,7 +3,6 @@ from flask import *
 import io
 import cv2
 import numpy as np
-from run_final import detection
 from facenet_pytorch import MTCNN
 # Imports
 import os
@@ -92,7 +91,6 @@ def ben():
     wait_time=10 # For face scan
     time_to_adjust=10 # Before book scan begins
 
-
     current_person = None
     # Init MTCNN object
     reader = easyocr.Reader(['en'])  # need to run only once to load model into memory
@@ -117,7 +115,7 @@ def ben():
         print('Face data doesnt exist for this USN.')
         exit()
     # Infinite Face Detection Loop
-    v_cap = cv2.VideoCapture(1)
+    v_cap = cv2.VideoCapture(0)
     v_cap.set(cv2.CAP_PROP_FRAME_WIDTH, image_size)
     v_cap.set(cv2.CAP_PROP_FRAME_HEIGHT, image_size)
     flag = False
@@ -171,7 +169,7 @@ def scan_books(reader,temp,image_size,time_to_adjust,usn_number):
         print('Image will be captured in 5 sec')
         print('Avoid sudden shaking for better results')
         time.sleep(5)
-        v_cap = cv2.VideoCapture(1)
+        v_cap = cv2.VideoCapture(0)
         v_cap.set(cv2.CAP_PROP_FRAME_WIDTH, image_size)
         v_cap.set(cv2.CAP_PROP_FRAME_HEIGHT, image_size)
         start=time.time()
