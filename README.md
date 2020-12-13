@@ -16,6 +16,8 @@ and in this manner we can store the record of the person borrowing the book.
 The record includes the USN of the person borrowing the book , the name of the book and the date and time of when the book was borrowed. 
 
 # HOW TO RUN
+(Run the app.py file to run the website after installing dependencies
+ If this fails run the run_final.py to run manually on IDE/Command Prompt)
 1. Git clone/download the repository into the local system.
 2. Install torch,torchvision first and the necessary dependencies in requirements.txt next 
 using the following commands in a new virtual environment(with python3, 64 bit installed)
