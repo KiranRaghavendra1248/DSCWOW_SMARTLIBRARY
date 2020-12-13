@@ -26,6 +26,9 @@ pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio===0.7.1 -f https:
 pip install -r requirements.txt
 ```
 Note: If any installation fails, please install the packages which are not installed independently.
+
 3. Run the run_final.py file to run using IDE or Command Prompt and make sure to add face data as ground truth value before proceeding to detection.
+
 4. For instructions on how to use the website for the above purpose, please watch video at the given link.
+
 5. Note: Look at the images in the Result folder for images on how to hold the book for recognition and for sample expected output.
